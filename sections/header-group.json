@@ -58,7 +58,7 @@
       "type": "custom-banner",
       "name": "Custom Banner",
       "settings": {
-        "heading": "Browse our latest products",
+        "heading": "",
         "subheading": "Discover our collection",
         "button_text": "Shop Now",
         "button_link": "",
