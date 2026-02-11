@@ -39,7 +39,7 @@
       "type": "header",
       "settings": {
         "logo_position": "middle-left",
-        "mobile_logo_position": "center",
+        "mobile_logo_position": "left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
@@ -60,7 +60,7 @@
       "settings": {
         "heading": "",
         "subheading": "Discover our collection",
-        "button_text": "Shop Now",
+        "button_text": "",
         "button_link": "",
         "background_image": "shopify://shop_images/Frame_1957_0b4b8d13-5114-4eda-b798-5d24985edbfe.jpg"
       }
