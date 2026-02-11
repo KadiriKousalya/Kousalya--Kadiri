@@ -1,86 +1,79 @@
-<section class="custom-banner" 
-  {% if section.settings.background_image != blank %}
-    style="background-image: url('{{ section.settings.background_image | image_url }}');"
-  {% endif %}
->
-  <div class="banner-overlay"></div>
-
-  <div class="banner-content">
-    <h1>{{ section.settings.heading }}</h1>
-    <p>{{ section.settings.subheading }}</p>
-
-    {% if section.settings.button_link != blank %}
+<section class="custom-banner">
+  <div class="banner-container">
+    
+    <div class="banner-text">
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.subheading }}</p>
       <a href="{{ section.settings.button_link }}" class="banner-btn">
         {{ section.settings.button_text }}
       </a>
-    {% endif %}
+    </div>
+
   </div>
 </section>
 
- 
-
-
 <style>
 .custom-banner {
-  position: relative;
   width: 100%;
-  min-height: 90vh;
-  background-size: cover;
-  background-position: center;
+  height: 100vh;
+  background: url({{ section.settings.background_image | image_url }}) no-repeat center right;
+  background-size: contain;
+  background-color: #f8f8f8;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
 }
 
-.banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
+.banner-container {
+  width: 1200px;
+  margin: auto;
+  padding-left: 80px;
 }
 
-.banner-content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-  text-align: left;
-  color: white;
+.banner-text {
+  max-width: 450px;
 }
 
-.banner-content h1 {
-  font-size: 48px;
+.banner-text h1 {
+  font-size: 60px;
+  font-weight: 600;
   margin-bottom: 20px;
-  writing-mode: horizontal-tb;
 }
 
-.banner-content p {
-  font-size: 18px;
+.banner-text p {
+  font-size: 16px;
+  color: #666;
   margin-bottom: 30px;
-  writing-mode: horizontal-tb;
 }
 
 .banner-btn {
-  padding: 12px 30px;
-  background: black;
-  color: white;
-  text-decoration: none;
   display: inline-block;
-  transition: 0.3s ease;
+  padding: 12px 30px;
+  background: #f4c542;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .banner-btn:hover {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .banner-content h1 {
-    font-size: 28px;
+  .custom-banner {
+    background-position: center top;
+    background-size: cover;
+    text-align: center;
+    padding: 40px 20px;
   }
 
-  .banner-content p {
-    font-size: 16px;
+  .banner-container {
+    padding-left: 0;
+  }
+
+  .banner-text h1 {
+    font-size: 32px;
   }
 }
 </style>
@@ -93,19 +86,19 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Browse our latest products"
+      "default": "The Gift Guide"
     },
     {
       "type": "text",
       "id": "subheading",
       "label": "Subheading",
-      "default": "Discover our collection"
+      "default": "Discover joy, your ultimate holiday gift destination."
     },
     {
       "type": "text",
       "id": "button_text",
       "label": "Button Text",
-      "default": "Shop Now"
+      "default": "CHOOSE GIFT"
     },
     {
       "type": "url",
