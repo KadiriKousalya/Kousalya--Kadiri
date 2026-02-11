@@ -1,3 +1,60 @@
+<section class="custom-banner"
+  style="background: url({{ section.settings.background_image | image_url }}) center/cover no-repeat;">
+
+  <div class="banner-content">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.subheading }}</p>
+    <a href="{{ section.settings.button_link }}" class="banner-btn">
+      {{ section.settings.button_text }}
+    </a>
+  </div>
+
+</section>
+
+<style>
+.custom-banner {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.banner-btn {
+  padding: 12px 30px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.banner-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 28px;
+  }
+}
+</style>
+
 {% schema %}
 {
   "name": "Custom Banner",
@@ -38,58 +95,3 @@
   ]
 }
 {% endschema %}
-
-<section class="custom-banner">
-  <div class="banner-content">
-    <h1>{{ section.settings.heading }}</h1>
-    <p>{{ section.settings.subheading }}</p>
-    <a href="{{ section.settings.button_link }}" class="banner-btn">
-      {{ section.settings.button_text }}
-    </a>
-  </div>
-</section>
-
-<style>
-.custom-banner {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  background: url({{ section.settings.background_image | image_url }}) center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.banner-content h1 {
-  font-size: 48px;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.banner-content p {
-  font-size: 18px;
-  color: white;
-  margin-bottom: 30px;
-}
-
-.banner-btn {
-  padding: 12px 30px;
-  background: black;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.banner-btn:hover {
-  background:white;
-  color:black;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .banner-content h1 {
-    font-size: 28px;
-  }
-}
-</style>
