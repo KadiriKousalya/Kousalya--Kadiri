@@ -61,7 +61,8 @@
         "heading": "Browse our latest products",
         "subheading": "Discover our collection",
         "button_text": "Shop Now",
-        "button_link": ""
+        "button_link": "",
+        "background_image": "shopify://shop_images/Frame_1957_1.png"
       }
     }
   },
