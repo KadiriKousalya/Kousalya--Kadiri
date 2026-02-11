@@ -1,97 +1,49 @@
-<section class="custom-banner"
-  style="background: url({{ section.settings.background_image | image_url }}) center/cover no-repeat;">
-
-  <div class="banner-content">
-    <h1>{{ section.settings.heading }}</h1>
-    <p>{{ section.settings.subheading }}</p>
-    <a href="{{ section.settings.button_link }}" class="banner-btn">
-      {{ section.settings.button_text }}
-    </a>
-  </div>
-
-</section>
-
 <style>
 .custom-banner {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 878px;
+  background: url({{ section.settings.background_image | image_url }}) center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  padding-left: 120px;
+  text-align: left;
+}
+
+.banner-content {
+  max-width: 500px;
 }
 
 .banner-content h1 {
   font-size: 48px;
-  color: white;
+  color: #1a1a1a;
   margin-bottom: 20px;
 }
 
 .banner-content p {
-  font-size: 18px;
-  color: white;
-  margin-bottom: 30px;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
 }
 
 .banner-btn {
   padding: 12px 30px;
-  background: black;
+  background: #1a1a1a;
   color: white;
   text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.banner-btn:hover {
-  background: white;
-  color: black;
+  display: inline-block;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
+  .custom-banner {
+    height: 500px;
+    padding-left: 30px;
+  }
+
   .banner-content h1 {
     font-size: 28px;
   }
 }
 </style>
-
-{% schema %}
-{
-  "name": "Custom Banner",
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Browse our latest products"
-    },
-    {
-      "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Discover our collection"
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Shop Now"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Background Image"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Custom Banner"
-    }
-  ]
-}
-{% endschema %}
