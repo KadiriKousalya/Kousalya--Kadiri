@@ -1,0 +1,104 @@
+<section class="gift-hero">
+  <div class="gift-hero__top">
+    <div class="gift-hero__logo">
+      {{ section.settings.logo_text }}
+    </div>
+
+    <div class="gift-hero__announcement">
+      {{ section.settings.top_text }}
+    </div>
+
+    <a href="{{ section.settings.top_button_link }}" class="gift-hero__choose-btn">
+      {{ section.settings.top_button_text }}
+    </a>
+  </div>
+
+  <div class="gift-hero__content">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.description }}</p>
+
+    <a href="{{ section.settings.button_link }}" class="gift-hero__shop-btn">
+      {{ section.settings.button_text }}
+    </a>
+  </div>
+</section>
+
+<style>
+.gift-hero {
+  background-color: #f4f4f4;
+  padding: 40px 20px 80px;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+/* TOP BAR */
+.gift-hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.gift-hero__logo {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.gift-hero__announcement {
+  font-size: 14px;
+}
+
+.gift-hero__choose-btn {
+  background: #f4f000;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  border: 1px solid #000;
+  transition: 0.3s;
+}
+
+.gift-hero__choose-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* CONTENT */
+.gift-hero__content {
+  max-width: 600px;
+}
+
+.gift-hero__content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.gift-hero__content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.gift-hero__shop-btn {
+  background: #000;
+  color: #fff;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.gift-hero__shop-btn:hover {
+  background: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .gift-hero__top {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gift-hero
