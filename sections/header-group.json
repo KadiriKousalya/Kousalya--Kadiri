@@ -58,26 +58,16 @@
       "type": "custom-banner",
       "name": "Custom Banner",
       "settings": {
-        "gift_guide_title": "The Gift Guide",
-        "gift_guide_desc": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
-        "gift_guide_button": "SHOP NOW"
-      }
-    },
-    "custom_liquid_pNkD88": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "heading": "Discover Your Ultimate Holiday Gift Destination",
+        "subtext": "Find the ideal gift for your loved ones.",
+        "button_text": "Choose Gift",
+        "button_link": ""
       }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "custom_banner_eNLF9P",
-    "custom_liquid_pNkD88"
+    "custom_banner_eNLF9P"
   ]
 }
